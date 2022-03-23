@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.1",
   "scripts": {
-    "serve": "vite",
     "prepare": "husky install && yarn huskyInit",
     "huskyInit": "npx husky add .husky/pre-commit \"npm run lint:commit\" && yarn husky add .husky/commit-msg 'npx --no-install commitlint --edit \"$1\"'",
     "lint:eslint": "eslint --cache --max-warnings 0 src/**/*.{vue,ts,tsx} --fix",
