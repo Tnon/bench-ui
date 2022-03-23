@@ -4,13 +4,10 @@
   </div>
 </template>
 <script lang="ts">
-  import { bcButton } from '../../packages/button';
   import { defineComponent } from 'vue';
 
   export default defineComponent({
-    components: {
-      bcButton,
-    },
+    components: {},
     setup() {},
   });
 </script>

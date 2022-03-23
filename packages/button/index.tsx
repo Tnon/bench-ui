@@ -13,6 +13,7 @@ const props = {
 };
 export type ButtonProps = Partial<ExtractPropTypes<typeof props>>;
 export const bcButton = autoInstall<ButtonProps>({
+  name: 'bcButton',
   props,
   setup(props, { slots }) {
     return () => (
