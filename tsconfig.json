@@ -21,5 +21,4 @@
       "node"
     ],
   },
-  "include": ["packages/**/*.ts", "packages/**/*.d.ts", "packages/**/*.tsx", "packages/**/*.vue", "typings/shims-vue.d.ts"]
 }

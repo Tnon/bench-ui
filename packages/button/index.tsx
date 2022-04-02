@@ -1,4 +1,4 @@
-import { ExtractPropTypes, PropType } from 'vue';
+import { defineComponent, ExtractPropTypes, PropType } from 'vue';
 import { autoInstall } from '../../utils/autoinstall';
 type buttonTypes = 'primary' | 'danger' | 'success';
 const props = {
@@ -12,14 +12,16 @@ const props = {
   },
 };
 export type ButtonProps = Partial<ExtractPropTypes<typeof props>>;
-export const bcButton = autoInstall<ButtonProps>({
-  name: 'bcButton',
-  props,
-  setup(props, { slots }) {
-    return () => (
-      <button class={`bc-button-${props.type}`}>
-        <div>{slots.default && slots.default()}</div>
-      </button>
-    );
-  },
-});
+export const bcButton = autoInstall(
+  defineComponent({
+    name: 'BcButton',
+    props,
+    setup(props, { slots }) {
+      return () => (
+        <button class={`bc-button-${props.type}`}>
+          <div>{slots.default && slots.default()}</div>
+        </button>
+      );
+    },
+  }),
+);
